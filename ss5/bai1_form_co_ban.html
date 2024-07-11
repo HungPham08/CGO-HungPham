@@ -6,39 +6,45 @@
 </head>
 <body>
 <form action="bt1_basic_form.html" method="post">
-    <table>
+    <table border="1px" cellpadding="5px">
         <tr>
-            <td colspan="2" class="title"><h1>ĐĂNG KÍ TÀI KHOẢN</h1></td>
+            <td colspan="2" class="title" STYLE="color: antiquewhite; background-color: chocolate"><h1>SỞ THÍCH CỦA BẠN </h1></td>
         </tr>
         <tr>
-            <td>Tài khoản </td>
+            <td>Họ và tên </td>
             <td>
-                <input type="text">
+                <input type="text"/>
             </td>
         </tr>
         <tr>
             <td>Email</td>
-            <td><input type="text"> </td>
-        </tr>
-
-        <tr>
-            <td>Điện thọai</td>
-            <td><input type="number"> </td>
+            <td><input type="text"/> </td>
         </tr>
         <tr>
-            <td>Mật khẩu</td>
+            <td class="title"><span>Sở thích</span></td>
             <td>
-                <input type="password">
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="hobby"> <span >Thể thao</span></td>
+                        <td><input type="checkbox" name="hobby"> <span >Âm nhạc</span></td>
+                        <td><input type="checkbox" name="hobby"> <span >Đọc sách</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="hobby"> <span >Lướt web</span></td>
+                        <td><input type="checkbox" name="hobby"> <span >Chơi game</span></td>
+                        <td><input type="checkbox" name="hobby"> <span >Điện ảnh</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="hobby"> <span >Du lịch</span></td>
+                    </tr>
+                </table>
             </td>
         </tr>
         <tr>
-            <td>Nhập lại mật khẩu</td>
-            <td><input type="password"></td>
-        </tr>
-        <tr>
+            <td></td>
             <td>
-                <input type="submit" value="Đăng kí">
-                <input type="reset" value="nhập lại">
+                <input type="submit" value="Gửi thông tin">
+                <input type="reset" value="Nhập lại">
             </td>
         </tr>
     </table>
