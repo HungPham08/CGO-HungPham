@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Luyện tập cấu trúc điều kiện 1 - Bài 7</title>
+    <title>Luyện tập 1 - Bài 7</title>
 </head>
 <body>
 <script>
     let callTime = +prompt("Tổng số phút gọi");
-    if (Number.isInteger(callTime) && callTime > 0) {
-        let fee = 25000;
-        if (callTime <= 50) {
-            fee += 600*callTime;
-        } else if (callTime <= 200) {
-            fee += 600*50 + 400*(callTime-50);
-        } else {
-            fee += 600*50 + 400*150 + 200*(callTime-200);
-        }
-        alert("Cước phí phải trả là "+fee+" VND");
+    let fee = 25000;
+    if (callTime <= 50) {
+        fee += 600*callTime;
+    } else if (callTime <= 200) {
+        fee += 600*50 + 400*(callTime-50);
+    } else {
+        fee += 600*50 + 400*150 + 200*(callTime-200);
     }
+    alert("Cước phí phải trả là "+fee+" VND");
 </script>
 </body>
 </html>
