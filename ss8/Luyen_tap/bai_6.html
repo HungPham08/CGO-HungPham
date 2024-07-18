@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1 - Bài 6</title>
+</head>
+<body>
+<script>
+    let doanhSo = +prompt("Nhập doanh số bán hàng (VND)");
+    if (Number.isInteger(doanhSo) && doanhSo > 1000) {
+        if (doanhSo <= 2000000) {
+            alert("3%");
+        } else if (doanhSo <= 5000000) {
+            alert("6%");
+        } else {
+            alert("10%");
+        }
+    }
+
+</script>
+</body>
+</html>

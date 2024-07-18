@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <td colspan="4"><input id="window"></td>
+    </tr>
+    <tr>
+        <td><button onclick="nhap('1')">1</button></td>
+        <td><button onclick="nhap('2')">2</button></td>
+        <td><button>3</button></td>
+        <td><button onclick="nhap('+')">+</button></td>
+    </tr>
+    <tr>
+        <td><button>4</button></td>
+        <td><button>5</button></td>
+        <td><button>6</button></td>
+        <td><button>-</button></td>
+    </tr>
+    <tr>
+        <td><button>7</button></td>
+        <td><button>8</button></td>
+        <td><button>9</button></td>
+        <td><button onclick="nhap('*')">x</button></td>
+    </tr>
+    <tr>
+        <td><button>0</button></td>
+        <td><button onclick="xoa()">C</button></td>
+        <td><button onclick="bang()">=</button></td>
+        <td><button>:</button></td>
+    </tr>
+</table>
+<script>
+    <!--    -->
+    //    function so1() {
+    //        document.getElementById("window").value +=1;
+    //    }
+    //    function so2() {
+    //        document.getElementById("window").value +=2;
+    //    }
+    //    function phepCong() {
+    //        document.getElementById("window").value +="+";
+    //    }
+    //    function phepNhan() {
+    //        document.getElementById("window").value +="*";
+    //    }
+
+    // dùng function có tham số
+    function nhap(kyTu) {
+        document.getElementById("window").value +=kyTu;
+    }
+    function bang() {
+        let string = document.getElementById("window").value;
+        let result = eval(string);
+        document.getElementById("window").value = result;
+    }
+    function xoa() {
+        document.getElementById("window").value="";
+    }
+</script>
+</body>
+</html>

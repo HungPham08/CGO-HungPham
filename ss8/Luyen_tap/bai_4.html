@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1 - Bài 4</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt("Nhập 1 số");
+    let number2 = +prompt("Nhập 1 số");
+    let number3 = +prompt("Nhập 1 số");
+    if (Number.isInteger(number1) && Number.isInteger(number2) && Number.isInteger(number3)) {
+        if (number1 > number2 && number1 > number3) {
+            alert(number1+" là số lớn nhất");
+        } else if (number2 > number3) {
+            alert(number2+" là số lớn nhất");
+        } else {
+            alert(number3+" là số lớn nhất");
+        }
+    } else {
+        alert("Số đã nhập không phải số nguyên");
+    }
+</script>
+</body>
+</html>

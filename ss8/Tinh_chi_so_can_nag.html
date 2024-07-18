@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng</title>
+</head>
+<body>
+<script>
+    let weight =+prompt('nhập số cân nặng là:');
+    let height =+prompt('nhập số chiều cao là:');
+    let bmi=weight/Math.pow(height,2);
+    if(bmi<18.5){
+        alert("under weight");
+    }else if (bmi<25.0){
+        alert("nomal");
+    }else if(bmi<30.0){
+        alert("Over weight");
+    }
+    else {
+        alert("Obese");
+    }
+</script>
+</body>
+</html>
