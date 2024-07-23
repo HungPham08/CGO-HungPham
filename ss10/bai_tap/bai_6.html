@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let i;
+    let dem =0;
+    let tong=0;
+    for (i=0;i<1000;i++){
+        if(i%7===0){
+            document.write(i+"<br>");
+            tong=tong+i;
+            dem ++;
+            if(dem===30){
+                document.write("Tổng 30 số đầu tiên chia hêt cho 7 là : "+tong+"<br>")
+                break;
+            }
+        }
+
+    }
+</script>
+</html>

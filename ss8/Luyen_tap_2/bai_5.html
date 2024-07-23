@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="hinh_chu_nhat" style="border: 1px;width:300px;height: 400px">
+    <label class="nhap">Chiều dài:</label><br>
+    <input type="number" id="chieu_dai"><br>
+    <label class="nhap">Chiều cao:</label><br>
+    <input type="number" id="chieu_cao"><br>
+    <button name="tinh_dien_tich" onclick="bai5()"><b>Tính diện tích</b></button>
+    <span style="font-size:18px;"><b id="ketqua"></b></span>
+
+
+</div>
+
+</body>
+<script>
+    function bai5(){
+        let length = document.getElementById('chieu_dai').value;
+        let height = document.getElementById('chieu_cao').value;
+        if (length>0&&height>0) {
+        let area =0.5* height * length;
+        document.getElementById('ketqua').innerText = "diện tích tam giác vuông là" + area + " m2" ;
+    } else {
+        alert("nhập lại chiều dài và chiều cao các kích thước phải lớn hơn không")
+    }
+
+    }
+
+</script>
+</html>

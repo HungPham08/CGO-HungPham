@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="luyen_tap_2.css">
+</head>
+<body>
+    <div class="hinh_chu_nhat" style="border: 1px;width:300px;height: 400px">
+        <label class="nhap">Chiều dài:</label><br>
+        <input type="number" id="chieu_dai"><br>
+        <label class="nhap">Chiều rộng:</label><br>
+        <input type="number" id="chieu_rong"><br>
+        <button name="tinh_dien_tich" onclick="bai4()"><b>Tính diện tích</b></button>
+        <span style="font-size:18px;"><b id="ketqua"></b></span>
+
+
+    </div>
+
+</body>
+<script>
+    function bai4(){
+        let dien_tich =document.getElementById('chieu_dai').value * document.getElementById('chieu_rong').value;
+        document.getElementById('ketqua').innerText= "S = "+dien_tich;
+    }
+</script>
+</html>

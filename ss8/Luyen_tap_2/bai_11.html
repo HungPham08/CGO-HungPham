@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 11: Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let salary = +prompt("Nhập lương nhân viên (triệu đồng):");
+    if (!isNaN(salary)) {
+        let receivedSalary = 0;
+        if (salary<7) {
+            receivedSalary = parseInt(salary*0.9*1000000);
+            alert("Thuế phải đóng: 10%\nLương ròng: "+receivedSalary+" VND");
+        } else if (salary < 15) {
+            receivedSalary = parseInt(salary*0.8*1000000);
+            alert("Thuế phải đóng: 20%\nLương ròng: "+receivedSalary+" VND");
+        } else {
+            receivedSalary = parseInt(salary*0.7*1000000);
+            alert("Thuế phải đóng: 30%\nLương ròng: "+receivedSalary+" VND");
+        }
+    } else {
+        alert("Tiền lương vừa nhập không hợp lệ");
+    }
+</script>
+</body>
+</html>

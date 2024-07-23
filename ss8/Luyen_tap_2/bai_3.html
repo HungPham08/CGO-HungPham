@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="hinh_vuong" style="">
+        <span style="font-size:16px;"><b>Nhập cạnh hình vuông:</b></span><br>
+        <input id="canh" style=""><br>
+        <br>
+        <button id="tinhtoan" onclick="bai3()"><b>Tính diện tích</b></button><br>
+        <br>
+        <span style="font-size:28px;"><b id="ketqua"></b></span>
+    </div>
+
+</body>
+<script>
+    function bai3(){
+        let dien_tich= document.getElementById('canh').value * document.getElementById('canh').value;
+        document.getElementById('ketqua').innerText="Diện tích hình vuông có cạnh bằng "+document.getElementById('canh').value+" là " +dien_tich;
+    }
+</script>
+</html>

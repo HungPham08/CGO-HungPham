@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7: Tính phương trình bậc 2</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số nguyên a:");
+    let b = +prompt("Nhập số nguyên b:");
+    let c = +prompt("Nhập số nguyên c:");
+    if (Number.isInteger(a) && Number.isInteger(b) && Number.isInteger(c)) {
+        if (a===0 && b===0 && c===0) {
+            alert("Phương trình "+a+"x^2+("+b+")x+("+c+") = 0 có vô số nghiệm");
+        } else {
+            let delta = b**2-4*a*c;
+            if (delta < 0) {
+                alert("Phương trình "+a+"x^2+("+b+")x+("+c+") = 0 vô nghiệm");
+            } else if (delta ===0) {
+                let x = -(b/(2*a));
+                alert("Phương trình "+a+"x^2+("+b+")x+("+c+") = 0 có nghiệm kép\nx = "+x);
+            } else {
+                let x1 = (-b+Math.sqrt(delta))/(2*a);
+                let x2 = (-b-Math.sqrt(delta))/(2*a);
+                alert("Phương trình "+a+"x^2+("+b+")x+("+c+") = 0 có 2 nghiệm \nx1 = "+x1+"\nx2 = "+x2);
+            }
+        }
+    } else {
+        alert("Số vừa nhập không hợp lệ");
+    }
+</script>
+</body>
+</html>

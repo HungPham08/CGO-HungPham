@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phuong trinh bac 1</title>
+</head>
+<body>
+<b>Phương trình bậc 1: Ax + B = 0</b><br>
+<p>Nhập 2 số a và b</p>
+<label class="nhap">Nhập a:</label><br>
+<input type="number" id="number_a"><br>
+<label class="nhap">Nhập b:</label><br>
+<input type="number" id="number_b"><br>
+<button onclick="bai6()"><b>Tìm x</b></button>
+<span style="font-size:18px;"><b id="ketqua"></b></span>
+
+</body>
+<script>
+    function bai6(){
+        if(a===0){
+            alert("'A = 0' -> Đây không phải phương trình bậc 1");
+        }
+        else {
+            let a = document.getElementById('number_a').value;
+            let b = document.getElementById('number_b').value;
+            let x = -b/a;
+            document.getElementById('ketqua').innerText="X = "+x;
+
+        }
+    }
+</script>
+</html>

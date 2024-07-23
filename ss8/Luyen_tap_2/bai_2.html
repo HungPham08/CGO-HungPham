@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - Chuyển đổi mét sang feet</title>
+    <link rel="stylesheet" href="luyen_tap_2.css">
+</head>
+<body>
+<div class="nhiet_do" >
+    <span style="font-size:16px;"><b>Nhập số mét:</b></span><br>
+    <input id="met" style=""><br>
+    <br>
+    <button id="tinhtoan" onclick="bai2()"><b>Chuyển đổi</b></button><br>
+    <br>
+    <span style="font-size:28px;"><b id="ketqua"></b></span>
+</div>
+</body>
+<script>
+    function bai2(){
+        if(document.getElementById('met').value<0){
+            document.getElementById('met').value="Vui lòng nhập số khác";
+        }
+        else{
+            let feet =(document.getElementById('met').value * 3.2808 ).toFixed(4);
+            document.getElementById('ketqua').innerText = document.getElementById('met').value+" mét= "+feet+" feet";
+
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let number_1 = 0;
+    let number_2 = 1;
+    document.write(number_1+"<br>");
+    document.write(number_2+"<br>");
+    let i=1;
+    let dem =1;
+    let tong=number_2+number_1;
+    for( let i =3;i<=20;i++) {
+        let number_3 = number_1+number_2;
+        number_1 = number_2;
+        number_2 = number_3;
+        document.write(number_3);
+        if(number_3%5===0){
+            if(dem===1){
+                document.write("  (Số đầu tiên chia hết cho 5)");
+            }
+            dem++;
+        }
+        document.write("<br>")
+        tong=tong+number_3;
+    }
+    document.write("Tổng 20 số fibonaci đầu tiên là: "+ tong);
+</script>
+</html>

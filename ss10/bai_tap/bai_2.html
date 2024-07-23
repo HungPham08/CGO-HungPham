@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let nhiet_do =+prompt("Nhập nhiệt độ hiện tại:");
+    while (nhiet_do<1000){
+
+    if(nhiet_do<=20){
+        while (nhiet_do<=20){
+            nhiet_do = +prompt("Tăng nhiệt độ hiện tại:");
+        }
+    }
+    else if(nhiet_do>=100){
+        while (nhiet_do>=100){
+            nhiet_do = +prompt("Giảm nhiệt độ hiện tại:");
+        }
+    }
+    else{
+        while (nhiet_do>20 && nhiet_do<100){
+            nhiet_do = +prompt("Nhập nhiệt độ hiện tại:");
+        }
+
+    }
+    }
+
+
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1 - Chuyển đổi nhiệt độ</title>
+    <link rel="stylesheet" href="luyen_tap_2.css">
+</head>
+<body>
+<div class="nhiet_do" style="">
+    <span style="font-size:16px;"><b>Nhập độ C:</b></span><br>
+    <input id="fahrenheit" style=""><br>
+    <br>
+    <button id="tinhtoan" onclick="bai1()"><b>Chuyển đổi</b></button><br>
+    <br>
+    <span style="font-size:28px;"><b id="ketqua"></b></span>
+</div>
+</body>
+<script>
+    function bai1(){
+        let templeF =(document.getElementById('fahrenheit').value *1.8+32.0).toFixed(4);
+
+        document.getElementById('ketqua').innerText = document.getElementById('fahrenheit').value+" độ C= "+templeF+" độ F";
+    }
+</script>
+
+</html>
