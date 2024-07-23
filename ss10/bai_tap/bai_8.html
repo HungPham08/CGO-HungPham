@@ -5,15 +5,29 @@
     <title>Game đoán số</title>
 </head>
 <body>
-<button id="choi" onclick="doan_so(a)"> <b>Chơi</b></button>
-<button id="choilai" onclick="choi_lai(a)"> <b>Chơi lại</b></button>
+<button id="choi" onclick="doan_so()"> <b>Chơi</b></button>
+<button id="choilai" onclick=""> <b>Chơi lại</b></button>
 
 </body>
 <script>
-    function doan_so(a){
-        let number_1 = prompt("Nhập số bắt đầu:")
-        let number_2 = prompt("Nhập số kết thúc:")
 
+    let number_1 = +prompt("Nhập số bắt đầu:");
+    let number_2 = +prompt("Nhập số kết thúc:");
+    function getRndInteger(number_1, number_2) {
+        return Math.floor(Math.random() * (number_1 - number_2 + 1) ) + number_2;
+    }
+    function doan_so(){
+        let number_3 = +prompt("Nhập số bạn đoán");
+        while (number_3>=number_1 || number_3 <=number_2){
+            let ramdom = getRndInteger(number_1,number_2);
+            if(number_3===ramdom){
+                alert("Bạn đoán đúng rồi");
+            }
+            else{
+                alert("Vui lòng chơi lại "+ ramdom + " khác "+ number_3);
+            }
+            number_3 = +prompt("Nhập số bạn đoán");
+        }
     }
 </script>
 </html>
