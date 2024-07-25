@@ -5,8 +5,11 @@
     <title>Game đoán số</title>
 </head>
 <body>
-<button id="choi" onclick="doan_so()"> <b>Chơi</b></button>
-<button id="choilai" onclick=""> <b>Chơi lại</b></button>
+<div style="padding: 50px; background-color: beige;width: 100%;text-align: center;">
+    <button id="choi" onclick="doan_so()"> <b>Chơi</b></button>
+    <button id="choilai" onclick=""> <b>Chơi lại</b></button>
+
+</div>
 
 </body>
 <script>
@@ -18,6 +21,7 @@
     }
     function doan_so(){
         let number_3 = +prompt("Nhập số bạn đoán");
+        let count =0;
         while (number_3>=number_1 || number_3 <=number_2){
             let ramdom = getRndInteger(number_1,number_2);
             if(number_3===ramdom){
@@ -26,6 +30,10 @@
             }
             else{
                 alert("Vui lòng chơi lại "+ ramdom + " khác "+ number_3);
+            }
+            count++;
+            if(count>=5){
+                break;
             }
             number_3 = +prompt("Nhập số bạn đoán");
         }
