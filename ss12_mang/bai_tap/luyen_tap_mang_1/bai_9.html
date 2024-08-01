@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-
 </body>
+<script>
+    let aarNumberA = [];
+    let aarNumberB = [];
+    let aarNumberC = [];
+    for (let i= 0;i<10;i++){
+        aarNumberA[i]= +prompt("Nhập phần tử thứ "+i+" của mảng A");
+    }
+    for (let k= 0; k<10; k++){
+        aarNumberB[k]= +prompt("Nhập phần tử thứ "+k+" của mảng B");
+    }
+    for (let j= 0;j<10;j++){
+        aarNumberC[j]=aarNumberA[j];
+        aarNumberC[aarNumberA.length+j] =aarNumberB[j];
+    }
+    document.write("Mảng A:"+aarNumberA);
+    document.write("Mảng B :"+aarNumberB);
+    document.write("Mảng C : "+aarNumberC);
+</script>
 </html>

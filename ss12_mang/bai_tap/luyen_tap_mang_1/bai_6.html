@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử,
+nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không?
+Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
 </body>
+
+<script>
+    let aarNum=[];
+    for (let i=0;i<10;i++){
+        aarNum[i]= +prompt("Nhập phần tử thứ "+i);
+    }
+    let number= +prompt("Nhập 1 số nguyên:");
+    let check = false;
+    for (let j=0;j<aarNum.length;j++){
+        if (aarNum[j]===number){
+            check = true;
+        }
+    }
+    if(check){
+        alert("V is in the array");
+    }
+    else {
+        alert("V is not in the array");
+    }
+</script>
 </html>

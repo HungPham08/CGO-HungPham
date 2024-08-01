@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
 </body>
+<script >
+    let aarNum=[];
+    for (let i=0;i<10;i++){
+        aarNum[i]= +prompt("Nhập phần tử thứ "+i);
+    }
+    let num;
+    for (let j=0;j<aarNum.length;j++){
+        for(let k=j+1;k<aarNum.length;k++)
+        if(aarNum[j]<aarNum[k]){
+            num=aarNum[j];
+            aarNum[j]=aarNum[k];
+            aarNum[k]=num;
+        }
+    }
+    alert("Mảng vừa nhập đã đc sắp xếp giảm dần: "+aarNum);
+</script>
 </html>

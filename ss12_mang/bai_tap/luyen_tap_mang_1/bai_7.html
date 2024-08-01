@@ -5,6 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
 </body>
+<script>
+    let aarNum=[3,3,3,4,4,4,5,5,5,6];
+    // for (let k=0;k<10;k++){
+    //     aarNum[k]= +prompt("Nhập phần tử thứ "+k);
+    // }
+    document.write('<br>Mảng vừa nhập:'+aarNum);
+    let number= 4;
+    let count=0;
+    for (let i=0;i<aarNum.length;i++){
+        for (let j=i+1;j<aarNum.length;j++){
+            if(aarNum[i]===number){
+                aarNum[i] = aarNum[j];
+                aarNum[j]= number;
+            }
+        }
+        if (aarNum[i]===number){
+            count++;
+        }
+    }
+    if(count>0){
+        for (i=1;i<=count;i++){
+            aarNum[aarNum.length-i]=0;
+        }
+    }
+    document.write('<br>'+count);
+    document.write('<br>Mảng đã thay đổi'+aarNum);
+</script>
 </html>
