@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
 </body>
+<script>
+    let string1 = prompt('Nhập chuỗi kí tự 1 ');
+    let string2 = prompt('Nhập chuỗi ký tự 2 ');
+    let count = false;
+    alert('Chuỗi ký tự 1 là: ' + string1 + '\n'+'Chuỗi ký tự 2 là: ' + string2  );
+    if (string1.length === string2.length) {
+        for (let i = 0; i < string1.length; i++) {
+            if (string1[i] !== string2[i]) {
+                count = true;
+            }
+        }
+        if (count) {
+            alert('Hai chuỗi không giống nhau');
+        } else {
+            alert('Hai chuỗi giống nhau');
+        }
+    } else {
+        alert('Hai chuỗi không giống nhau');
+    }
+</script>
 </html>
