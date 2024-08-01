@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tăng giá trị đối số</title>
+</head>
+<body>
+<!--Tạo hàm nhận vào một đối số dạng số, -->
+<!--tăng giá trị đối số đó lên 1 và trả lại giá trị cho lời gọi hàm. -->
+<!--Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.-->
+<p>Nhập 1 số
+    <input id="number" type="number">
+</p>
+<p>Tăng số vừa nhập:
+    <b id="result" ></b>
+</p>
+<button onclick="result()">Tăng số </button>
+<script>
+    function addNumber(num) {
+        return num + 1;
+    }
+    function result() {
+        let value = +document.getElementById('number').value;
+        document.getElementById('result').innerText = addNumber(value);
+    }
+</script>
+</body>
+</html>
