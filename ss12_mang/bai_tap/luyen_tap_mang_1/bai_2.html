@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau.
+Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+</body>
+<script>
+    let aarNumber = [];
+    let stt = 0;
+    let str1 ="";
+    let str2 ="";
+    for (let i=0 ;i<10;i++){
+        aarNumber[i] = +prompt("Nhập số nguyên thứ "+ (i+1));
+        str1 +=aarNumber[i] + " ,";
+    }
+
+    let max = aarNumber[0];
+    for (let j =0;j<aarNumber.length;j++ ){
+        if (aarNumber[j]>=max){
+            max = aarNumber[j];
+            stt = j;
+        }
+    }
+    alert("mảng vửa nhập :"+str1 +"</br>"+
+        "Phần tử lớn nhất trong mảng là :"+max+" ở vị trí thứ "+stt );
+</script>
+</html>

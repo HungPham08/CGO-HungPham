@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử.
+Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+</body>
+<script>
+    let aarNumber = [];
+    let dem = 0;
+    let str1 ="";
+    let str2 ="";
+    for (let i=0 ;i<10;i++){
+        aarNumber[i] = +prompt("Nhập số nguyên thứ "+ (i+1));
+        str1 +=aarNumber[i] + " ,";
+    }
+    for (let j of aarNumber){
+        if (aarNumber[j]<=10){
+            dem ++;
+            str2 += " ," + aarNumber[j]
+        }
+    }
+    alert("10 số vừa nhập là : "+str1 )
+    alert("Có "+dem+" số nguyên nhỏ hơn 10 : "+str2);
+</script>
+</html>
