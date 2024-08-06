@@ -10,7 +10,8 @@
 <script>
     let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
     let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
-
+    let message = findCorrespondingConstellation(prompt("Input a star:"));
+    document.write(message);
     function check_star(star) {
         let index_star1 = 0;
         let result = "";

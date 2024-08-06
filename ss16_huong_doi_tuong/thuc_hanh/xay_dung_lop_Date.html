@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop Date</title>
+</head>
+<body>
+
+</body>
+<script>
+    class MyDate {
+        constructor(day,month,year) {
+            this.day =day;
+            this.month = month;
+            this.year = year;
+
+        }
+        getDay(){
+            return this.day;
+        }
+        getMonth(){
+            return this.month;
+        }
+        getYear(){
+            return this.year;
+        }
+        setDay() {
+            this.day = day.toString();
+        }
+        setMonth(){
+            this.month = month.toString();
+        }
+        setYear(){
+            this.year= year.toString();
+        }
+
+    }
+    let date = new MyDate(8,10,1996);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+</script>
+</html>

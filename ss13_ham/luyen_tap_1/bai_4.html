@@ -5,6 +5,26 @@
     <title>Title</title>
 </head>
 <body>
-
+Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không.
+Nếu là ký tự số hàm trả về true, ngược lại trả về false.
 </body>
+<script>
+    function isNumber(data) {
+        let flag =true;
+        if (isNaN(data)) {
+            flag= false;
+            return flag;
+        } else {
+            return flag;
+        }
+    }
+
+    let number = prompt("Nhập 1 ký tự: ")
+
+    if (isNumber(number)) {
+        alert("Ký tự vừa nhập là 1 con số");
+    } else {
+        alert("Ký tự vừa nhập không phải là số");
+    }
+</script>
 </html>

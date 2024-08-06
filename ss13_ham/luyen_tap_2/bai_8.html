@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Bài 8: Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.
+</body>
+<script>
+    // function reverseArray(array) {
+    //     let tempArr = [];
+    //     for (let i = array.length - 1; i >= 0; i--) {
+    //         tempArr.push(array[i]);
+    //     }
+    //     return tempArr;
+    // }
+    //
+    // let number= [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    // number = reverseArray(number);
+    // document.write(number);
+
+    function reverse(nums){
+        let numbers = nums;
+        let value = Math.round(numbers.length/2 );
+        let num;
+        if(numbers.length%2!==0){
+            value = value -1;
+        }
+        for (let i=value;i>=0;i--){
+            if(numbers.length%2===0){
+                num = numbers[value+i-1];
+                numbers[value+i-1]=numbers[value-i];
+                numbers[value-i]=num;
+            }
+            else {
+                num = numbers[value-i];
+                numbers[value-i]=numbers[value+i];
+                numbers[value+i]=num;
+            }
+        }
+        return numbers;
+    }
+    let numbers = [2,3.4];
+
+    let value = Math.round(numbers.length/2 );
+    document.write('<br>'+value);
+    document.write('<br>'+numbers.length);
+    document.write('<br>['+reverse(numbers)+']');
+    document.write('<br>'+numbers.length);
+
+</script>
+
+</html>

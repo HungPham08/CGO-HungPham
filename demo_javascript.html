@@ -2,16 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tạo Lớp Hình Chữ Nhật</title>
 </head>
-<body >
-    <h2 id="intro">
+<body>
+<canvas id="display"></canvas>
+<p id="show"></p>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
 
-    </h2>
+        getArea() {
+            return this.length * this.width;
+        }
 
+        getCircumference() {
+            return (this.width + this.length) * 2;
+        }
+
+        displayRectangleOnScreen() {
+            let canvas = document.getElementById("display");
+            let ctxt = canvas.getContext("2d");
+            ctxt.fillStyle = "#00ffee";
+            ctxt.fillRect(0, 0, this.length, this.width);
+        }
+    }
+
+    let rectangle = new Rectangle(300, 100);
+    rectangle.displayRectangleOnScreen();
+    rectangle.length = 250;
+    rectangle.width = 80;
+    document.getElementById("show").innerHTML = "Area: " + rectangle.getArea() + "<br>Circumference: " + rectangle.getCircumference();
+
+</script>
 </body>
 </html>
-<script>
-    var intro = "hello world";
-    document.getElementById("intro").innerHTML=intro;
-</script>
