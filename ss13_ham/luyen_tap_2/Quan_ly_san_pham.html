@@ -7,23 +7,72 @@
 <body>
 <h2> Add new produce</h2>
 <input type="text" name="" id="name" value="name produce">
-<button>Add</button>
-<table>
+<span id="total"></span>
+<button onclick="add()">Add</button>
+<table border="1px">
     <thead>
     <tr>
         <th>Produce name</th>
         <th colspan="2">Action</th>
     </tr>
     </thead>
-    <tbody>
-    <tr>
-        <td>
+    <tbody id="tbodyProduct">
 
-        </td>
-
-
-    </tr>
     </tbody>
 </table>
 </body>
+<script>
+    class Product{
+        constructor(name,price,color) {
+            this.name = name;
+            this.price = price;
+            this.color = color;
+
+        }
+        setName(){
+
+        }
+        getName(){
+
+        }
+        setPrice(){
+
+        }
+        getPrice(){
+
+        }
+        setColor(){
+
+        }
+        getColor(){
+
+        }
+    }
+    let product1 =new Product("Sony Xperia",300,"black");
+    let product2 =new Product("Samsung Galaxy",300,"black");
+    let product3 =new Product("Iphone 15 pro Max",300,"black");
+    array =[product1,product2,product3];
+    function displayProduct(arr){
+        let str ="";
+        for (let i=0;i< arr.length;i++){
+            str +="<tr>"+
+                "<td>"+arr[i].getName()+"</td>"+
+                <td></td>
+        }
+    }
+    function addNewProduct(){
+        let productName = document.getElementById('name').value;
+        array.unshift(productName);
+        document.getElementById("name").value = "";
+        displayProduct(array);
+    }
+    function deleteProduct(i){
+        let check = confirm("Are you sure to delete" + array(i));
+        if(check){
+            array.splice(i,1);
+            alert("Delete successfully");
+        }
+        displayProduct(array);
+    }
+</script>
 </html>

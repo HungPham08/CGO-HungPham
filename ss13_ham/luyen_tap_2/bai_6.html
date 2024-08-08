@@ -8,4 +8,20 @@
 Bài 6: Viết hàm nhận vào một số, kiểm tra xem nếu số đưa vào có phải là nguyên dương không.
 Nếu là nguyên dương trả về true, ngược lại trả về false.
 </body>
+<script>
+    function checkNumber(number) {
+        let check=false;
+        if (Number.isInteger(number) && number > 0) {
+            check= true;
+        }
+        return check;
+    }
+    let number = +prompt("Nhập vào số cần kiểm tra : ");
+    if (checkNumber(number)) {
+        console.log("Số vừa nhập vào là số nguyên dương ");
+    } else {
+        console.log("Số vừa nhập vào không phải là số nguyên dương");
+    }
+
+</script>
 </html>

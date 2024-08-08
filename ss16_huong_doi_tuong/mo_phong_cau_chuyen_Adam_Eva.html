@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+
+        }
+        getWeight(){
+            return this.weight;
+        }
+        isEmpty(){
+            if(this.weight <= 0){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        decrease(){
+            if(this.isEmpty()){
+                alert("Tao da het roi");
+            }
+            else {
+                this.weight--;
+            }
+        }
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        isMale(){
+            if(this.gender===1){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        setGender(newGender){
+            this.gender = newGender;
+        }
+        getGender(){
+            if(this.isMale()){
+                return "Male"
+            }
+            else {
+                return "Famale";
+            }
+        }
+        checkApple(Apple){
+            return Apple.isEmpty();
+        }
+        eat(Apple){
+            Apple.decrease();
+        }
+        say(str){
+            document.write(str+"<br>");
+        }
+        getName(){
+            return this.name;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(weight){
+            this.weight = weight;
+        }
+        getInfo(human){
+            alert(human.name + " " +human.weight + " " +human.getGender());
+        }
+
+    }
+
+    let adam = new Human("Adam", 1, 60);
+    let eva = new Human("Eva", 2, 50);
+    let apple = new Apple(10);
+    adam.say("I am "+adam.name);
+    eva.say("I am "+eva.name);
+
+
+    while (apple.isEmpty() !== true) {
+        document.write("Adam ăn táo" + "<br>");
+        adam.eat(apple);
+        document.write("Quả táo còn: "+apple.getWeight() + " đơn vị" + "<br>");
+        document.write( "Cân nặng của Adam là: " + adam.getWeight() + " đơn vị" + "<br><br>");
+        document.write("Eva ăn táo" + "<br>");
+        eva.eat(apple);
+        document.write("Quả táo còn: " +apple.getWeight() + " đơn vị" + "<br>");
+        document.write( "Cân nặng là: " + eva.getWeight() + " đơn vị" + "<br>");
+    }
+</script>
+</html>

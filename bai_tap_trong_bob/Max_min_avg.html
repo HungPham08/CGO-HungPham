@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = [1,5,10, -2];
+    console.log(maxMinAvg(arr));
+    function maxMinAvg(arr) {
+        //your code here
+        let max = arr[0];
+        let min = arr[0];
+        let sum = 0
+        let arrnew = [];
+        for(let i=0;i<arr.length;i++){
+            if(arr[i]>max){
+                max = arr[i];
+            }
+            if(arr[i]<min){
+                min = arr[i];
+            }
+            sum+=arr[i];
+        }
+        arrnew.push(max);
+        arrnew.push(min);
+        arrnew.push(sum/arr.length);
+        return arrnew;
+    }
+</script>
+</html>

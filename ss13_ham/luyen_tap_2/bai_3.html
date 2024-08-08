@@ -7,4 +7,15 @@
 <body>
 Bài 3: Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. Gọi hàm vừa xây dựng được.
 </body>
+<script>
+    function giaiThua(num){
+        let factorial =1;
+        for (let i=num;i>0;i--){
+            factorial *= i;
+        }
+        return factorial;
+    }
+    let number = +prompt("nhập 1 số nguyên:");
+    alert("Giai thừa của "+number+" là: "+giaiThua(number));
+</script>
 </html>

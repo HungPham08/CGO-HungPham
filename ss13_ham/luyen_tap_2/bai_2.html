@@ -7,4 +7,15 @@
 <body>
 Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
 </body>
+<script>
+    function theArea(length,width){
+        return length*width;
+    }
+    function thePerimeter(length,width){
+        return (length+width)*2;
+    }
+    let length = +prompt("Nhập chiều dài hình chữ nhật:");
+    let width = +prompt("Nhập rộng dài hình chữ nhật:");
+    alert("Hình chữ nhật có: \nChiều dài : " +length+"\nChiều rộng:"+width+"\nDiện tích: "+theArea(length,width)+"\nChu vi: "+thePerimeter(length,width));
+</script>
 </html>
