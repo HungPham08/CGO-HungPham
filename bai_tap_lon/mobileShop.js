@@ -46,7 +46,7 @@ let arrPhones = [
     new Phone("ip13", "Iphone 13", "20000000", "Trang", "8gb", "256gb","5","img/iphone13.jpg",""),
     new Phone("ip14", "Iphone 14", "30000000", "Tím", "8gb", "520gb","3","img/iphone14.jpg","Điểm ấn tượng nhất trên iPhone năm nay nằm ở thiết kế màn hình, có thể dễ dàng nhận thấy được là hãng cũng đã loại bỏ cụm tai thỏ truyền thống qua bao đời iPhone bằng một hình dáng mới vô cùng lạ mắt."),
     new Phone("ip15", "Iphone 15", "36000000", "Đen", "8gb", "520gb","15","img/iphone15.jpg","Điểm khác biệt lớn nhất giữa iPhone 15 và thế hệ tiền nhiệm là ở kiểu màn hình “Dynamic Island” - kiểu thiết kế mới thay thế cho màn hình “tai thỏ” trước đây. Kiểu thiết kế này mang lại vẻ ngoài mới mẻ, thu hút và dễ chịu hơn cho màn hình thiết bị."),
-    new Phone("ip12", "Iphone 12", "16000000", "F", "cv046", "photo5.jpg","","img/iphon15.webp","")
+    new Phone("ip12", "Iphone 12", "16000000", "Vang", "8gb", "560gb","2","img/iphone12.jpg","")
 ];
 
 displayPhone(arrPhones);
