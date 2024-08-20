@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Có một mảng số nguyên gồm n phần tử ( n <= 50) và số nguyên dương k. Đếm
+các cặp số trong mảng số nguyên có tổng chia hết cho k.
+Ví dụ: Có mảng số nguyên gồm n = 6 phần tử là arr = [1,2,3,4,5,6] và số nguyên
+dương là k = 5. Kết quả có 3 cặp số thỏa mãn yêu cầu là (1, 4), (2, 3) và (4, 6).
+
+</body>
+<script>
+    let n = +prompt("Nhập số phần tử của mảng:");
+    if(n<=50){
+        let k = +prompt("Nhập số nguyên dương k:");
+        let arrNum = [];
+        for (let i = 0;i<n;i++){
+            arrNum[i]= +prompt("Nhập phần tử thứ "+i);
+
+        }
+        let str = "";
+        alert("Mảng vừa nhập là arr = ["+arrNum+"]");
+        function searchNum(arr) {
+            let str =" ";
+            let count =0;
+            for (let i= 0;i<arr.length;i++){
+                for (let j = i+1; j<=arr.length;j++){
+                    if((arr[i]+arr[j]) %k ===0){
+                        count++;
+                        if (count===1){
+                            str += "("+arr[i]+","+arr[j]+")";
+                        }
+                        else {
+                            str += ", ("+arr[i]+","+arr[j]+") ";
+                        }
+                    }
+
+                }
+            }
+            return "Kết quả có "+count+"cặp thỏa mãn yêu cầu là:" + str;
+        }
+        alert(searchNum(arrNum));
+    }
+</script>
+</html>

@@ -10,4 +10,33 @@ hiển thị giá trị trung bình của các phần tử chia hết cho 5 ở 
 Ví dụ: [15,2,3,5,10,15,7,8,9,10]. Kết quả sau khi thực hiện là: (15+5+10)/3) = 10
 
 </body>
+<script>
+    // let n = +prompt("Nhập số phần tử:");
+    let arrNumber = [15,2,3,5,10,15,7,8,9,10];
+    let total = 0;
+    let count = 0;
+    let str ="";
+    // for (let i=10;i<n;i++){
+    //     arrNumber[i] = +prompt("Nhập phần tử thứ "+i);
+    // }
+    for (let j =0;j<arrNumber.length;j++){
+        if(j%3===0){
+            if(arrNumber[j]%5===0){
+                total += arrNumber[j];
+                count++;
+                if(count===1){
+                    str = str + arrNumber[j] ;
+                }
+                else {
+                    str +=("+" +arrNumber[j]);
+                }
+            }
+
+        }
+    }
+    console.log(str);
+    alert("("+str+")/"+count +"="+total/count);
+
+
+</script>
 </html>

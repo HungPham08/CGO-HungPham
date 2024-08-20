@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho một mảng số nguyên có số phần tử không vượt quá 20 phần tử, viết-->
+<!--chương trình tìm tất cả các số có trong mảng là bội chung của 3 và 5, sau đó tính tổng-->
+<!--của các số đó và hiển thị ra màn hình.-->
+</body>
+<script>
+    let n = +prompt("Nhập số phần tử của mảng:");
+    if(n<=20){
+        let arr =[];
+        for (let i=0;i<n;i++){
+            arr[i] = +prompt("Nhập phần tử thứ "+i);
+        }
+        let str = "";
+        alert("Mảng vừa nhập: arr=["+arr+"]");
+        let total = 0;
+        let count = 0;
+        for (let i=0;i<arr.length;i++){
+            if(arr[i]%3===0&&arr[i]%5===0){
+                total +=arr[i];
+                count ++;
+                if(count ===1){
+                    str +=arr[i];
+                }
+                else{
+                    str += "+"+arr[i];
+                }
+
+            }
+        }
+        alert("tổng của các số bội chung của 3 và 5 là: ("+str+")="+total );
+    }
+    else {
+        alert("Vui lòng nhập lại, số phần tử của mảng nhỏ hơn 20");
+    }
+
+</script>
+</html>

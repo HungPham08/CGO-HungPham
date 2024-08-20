@@ -20,7 +20,23 @@ Câu 4: Tạo một lớp Máy tính  có:
 </body>
 <script>
     class Computer{
-        constructor(code,name,manufacturer,) {
+        constructor(code,name,manufacturer,price) {
+            this.code = code;
+            this.name = name;
+            this.munufacturer = manufacturer;
+            this.price = price;
+        }
+        getCode(){
+            return this.code;
+        }
+        getName(){
+            return this.name;
+        }
+        getMunufacturer(){
+            return this.munufacturer;
+        }
+        getPrice(){
+            return this.price;
         }
     }
 </script>

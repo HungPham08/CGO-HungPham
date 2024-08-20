@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Trường học Codegym có cách chấm điểm cho học sinh như sau:-->
+<!-- - Điểm của mỗi học sinh nằm trong khoảng từ 0 đến 100.-->
+<!-- - Nếu điểm số của học sinh bé hơn 50 tính là trượt-->
+<!--Trung là một giáo viên tại Codegym và có thói quen làm tròn điểm cho học sinh theo-->
+<!--quy tắc sau:-->
+<!-- - Nếu khoảng cách giữa điểm số của học sinh và bội số tiếp theo của 5 ít hơn 3-->
+<!--thì làm tròn điểm số lên bội số tiếp theo của 5.-->
+<!-- - Nếu điểm số của học sinh bé hơn 48 thì không làm tròn vì kết quả vẫn tính là-->
+<!--trượt.-->
+<!--Viết hàm thực hiện việc làm tròn điểm số của học sinh theo quy tắc của giáo viên-->
+<!--Trung. (hàm nhận tham số truyền vào là điểm số của học sinh-->
+</body>
+<script>
+    let number = +prompt("Nhập điểm của học sinh:");
+    if(number<=100&&number>0){
+        function func1(num){
+            if(num >=50){
+                if((num%5)>=3){
+                    num = num + 5 - num%5;
+                }
+                return num;
+            }
+            else {
+                return num + "Trượt";
+            }
+        }
+        alert("Điểm của học sinh là " +func1(number));
+    }
+    else {
+        alert("Điểm nhập vào không đúng");
+    }
+</script>
+</html>
